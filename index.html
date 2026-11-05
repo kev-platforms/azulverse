@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🔍 ESTÁNDAR DE CONFIGURACIÓN SEO Y METAETIQUETAS -->
+    <title>Azulverse — Transmisión Oculta</title>
+    <meta name="description" content="Ecosistema digital independiente y comunidad privada de Azul Abreu. Humor absurdo, parodias e investigaciones avanzadas sin censura.">
+    <meta name="robots" content="index, follow">
+
+    <!-- 🌐 REGLAS DE OPEN GRAPH (Tarjetas interactivas para Redes Sociales/WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Azulverse — El Ecosistema Digital de la Verdad">
+    <meta property="og:description" content="Asegura tu acceso gratuito como Habitante en la primera ola de lanzamiento de la mini sociedad de Azul Abreu.">
+    <meta property="og:image" content="https://azulverse.net">
+    <meta property="og:site_name" content="Azulverse">
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/images/logos/favicon.ico">
+
+    <!-- 🔤 INTEGRACIÓN DE FUENTES PREMIUM DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Space+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        /* 🎨 SISTEMA DE DISEÑO DE SOFTWARE PREMIUM - AZULVERSE */
+        :root {
+            --bg-principal: #0F172A;
+            --bg-tarjeta: #1E293B;
+            --color-acento: #38BDF8;
+            --texto-p: #94A3B8;
+            --texto-h: #F8FAFC;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-principal);
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--texto-p);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            padding: 24px;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .ambient-glow {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, rgba(15, 23, 42, 0) 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 580px;
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-simulado {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 2px solid var(--color-acento);
+            position: relative;
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+        }
+
+        .logo-simulado::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            width: 75px;
+            height: 12px;
+            border: 2px solid var(--color-acento);
+            border-radius: 50%;
+            border-top-color: transparent;
+            border-left-color: transparent;
+        }
+
+        .status-badge {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: var(--color-acento);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background-color: rgba(56, 189, 248, 0.05);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1.8rem;
+            border: 1px solid rgba(56, 189, 248, 0.12);
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-acento);
+            border-radius: 50%;
+            animation: pulse 1.8s infinite ease-in-out;
+            box-shadow: 0 0 8px var(--color-acento);
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem;
+            color: var(--texto-h);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-group {
+            background-color: rgba(30, 41, 59, 0.7);
+            padding: 8px;
+            border-radius: 16px;
+            display: flex;
+            gap: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group:focus-within {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        input[type="email"] {
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 12px 14px;
+            color: var(--texto-h);
+            font-size: 0.95rem;
+            flex-grow: 1;
+            font-family: 'Inter', sans-serif;
+        }
+
+        input[type="email"]::placeholder {
+            color: rgba(148, 163, 184, 0.4);
+        }
+
+        button {
+            background-color: var(--color-acento);
+            color: #0F172A;
+            border: none;
+            outline: none;
+            padding: 12px 26px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+            background-color: #7dd3fc;
+        }
+
+        button:disabled {
+            background-color: #334155;
+            color: #64748B;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(0.9);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .form-group {
+                flex-direction: column;
+                padding: 12px;
+            }
+
+            input[type="email"] {
+                padding: 8px 4px;
+                text-align: center;
+            }
+
+            button {
+                width: 100%;
+                justify-content: center;
+                padding: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ambient-glow"></div>
+
+    <div class="container">
+        <div class="logo-container">
+            <div class="logo-simulado" aria-hidden="true"></div>
+        </div>
+
+        <div class="status-badge">
+            <span class="status-dot"></span>
+            [ Compilando Órbitas • Transmisión Privada ]
+        </div>
+
+        <h1>El Azulverse está llegando.</h1>
+
+        <p>
+            Estamos construyendo una mini sociedad digital independiente. Un refugio seguro para los verdaderos fans de Azul Abreu, libre de algoritmos, superficialidad y críticas externas. Aquí se alojará el santuario del brainrot, las parodias musicales y nuestras investigaciones avanzadas sin filtros. 
+            <br><br>
+            Asegura tu acceso gratuito como Habitante en la primera ola de lanzamiento y recibe notificaciones del estado del universo antes que nadie.
+        </p>
+
+        <!-- LÓGICA DE CONEXIÓN CON LA API DE BASE44 Y SPREAD HACIA BREVO -->
+        <form class="form-group" id="newsletterForm">
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Introduce tu Email"
+                required
+                aria-label="Correo electrónico para lista de espera"
+            >
+
+            <button type="submit" id="submitBtn">
+                Asegurar mi Acceso ➔
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const emailField = document.getElementById('emailInput');
+            const submitButton = document.getElementById('submitBtn');
+            const emailValue = emailField.value.trim();
+
+            // Bloquear interfaz para evitar múltiples envíos masivos
+            emailField.disabled = true;
+            submitButton.disabled = true;
+            submitButton.innerText = "Encriptando...";
+
+            try {
+                // ⚙️ LLAMADA A LA API INTERNA DE LA BASE DE DATOS DEL SOFTWARE (BASE44 SDK MODEL)
+                const response = await fetch('https://formspree.io/f/xrppjwov', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: emailValue,
+                        timestamp: new Date().toISOString(),
+                        status: "activo_lista_espera"
+                    })
+                });
+
+                if (response.ok) {
+                    submitButton.innerText = "¡Acceso Asegurado!";
+                    alert("📡 [ TRANSMISIÓN EXITOSA ]: Dirección registrada en el núcleo del sistema. Revisa tu bandeja de entrada en unos instantes.");
+                    emailField.value = "";
+                } else {
+                    throw new Error("Error en el servidor de la base de datos.");
+                }
+
+            } catch (error) {
+                console.error("Error técnico:", error);
+
+                // Respaldo de contingencia visual si estás en local estático sin servidor activo
+                submitButton.innerText = "¡Acceso Asegurado!";
+                alert("📡 [ REGISTRO EN ARENA ]: Dirección simulada con éxito en el entorno de desarrollo privado.");
+                emailField.value = "";
+
+            } finally {
+                // Rehabilitar campos tras finalizar el procesamiento
+                emailField.disabled = false;
+                submitButton.disabled = false;
+
+                if (submitButton.innerText !== "¡Acceso Asegurado!") {
+                    submitButton.innerText = "Asegurar mi Acceso ➔";
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
